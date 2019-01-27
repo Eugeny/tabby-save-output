@@ -1,0 +1,48 @@
+{
+  "name": "terminus-save-output",
+  "version": "0.0.1",
+  "description": "Lets you stream console output into a file",
+  "keywords": [
+    "terminus-plugin"
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "webpack --progress --color",
+    "watch": "webpack --progress --color --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "Eugene Pankov",
+  "license": "MIT",
+  "devDependencies": {
+    "@angular/common": "^6.0.7",
+    "@angular/core": "^6.0.7",
+    "@angular/forms": "^6.0.7",
+    "@angular/platform-browser": "^6.0.7",
+    "@ng-bootstrap/ng-bootstrap": "^2.2.0",
+    "@types/webpack-env": "^1.13.0",
+    "apply-loader": "^2.0.0",
+    "awesome-typescript-loader": "^3.1.2",
+    "css-loader": "^2.1.0",
+    "electron": "^1.6.11",
+    "ngx-toastr": "^8.8.0",
+    "node-sass": "^4.11.0",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "rxjs": "^6.2.1",
+    "sass-loader": "^7.1.0",
+    "strip-ansi": "^5.0.0",
+    "style-loader": "^0.23.1",
+    "terminus-core": "^1.0.0-alpha.48",
+    "terminus-terminal": "^1.0.68-c17-g8b64a81",
+    "typescript": "^2.9.2",
+    "webpack": "^2.3.3"
+  },
+  "peerDependencies": {
+    "@angular/core": "^4.0.1"
+  },
+  "repository": "eugeny/terminus-save-output"
+}

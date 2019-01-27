@@ -1,0 +1,14 @@
+tab-body .content .save-output-ui {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    z-index: 5;
+
+    background: rgba(0, 0, 0, .8);
+    padding: 5px 10px;
+    border-radius: 3px;
+
+    display: inline-flex;
+    align-items: center;
+}
