@@ -1,6 +1,6 @@
 {
   "name": "terminus-save-output",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lets you stream console output into a file",
   "keywords": [
     "terminus-plugin"
