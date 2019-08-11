@@ -40,11 +40,6 @@ export class SaveOutputContextMenu extends TerminalContextMenuItemProvider {
             return
         }
 
-        let ui: HTMLElement = document.createElement('div')
-        ui.classList.add('save-output-ui')
-        tab.element.nativeElement.querySelector('.content').appendChild(ui)
-        ui.innerHTML = require('./ui.pug')
-
         let path = this.electron.dialog.showSaveDialog(
             this.hostApp.getWindow(),
             { defaultPath: 'terminal-log.txt' }
@@ -53,6 +48,11 @@ export class SaveOutputContextMenu extends TerminalContextMenuItemProvider {
         if (!path) {
             return
         }
+
+        let ui: HTMLElement = document.createElement('div')
+        ui.classList.add('save-output-ui')
+        tab.element.nativeElement.querySelector('.content').appendChild(ui)
+        ui.innerHTML = require('./ui.pug')
 
         let stream = fs.createWriteStream(path)
 
