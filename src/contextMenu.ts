@@ -40,7 +40,7 @@ export class SaveOutputContextMenu extends TerminalContextMenuItemProvider {
             return
         }
 
-        let path = this.electron.dialog.showSaveDialog(
+        let path = this.electron.dialog.showSaveDialogSync(
             this.hostApp.getWindow(),
             { defaultPath: 'terminal-log.txt' }
         )
