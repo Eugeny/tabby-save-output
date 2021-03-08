@@ -1,0 +1,29 @@
+h3 Save Output
+
+.form-line
+    .header
+        .title Automatically save output for new tabs
+        .description Stores complete session logs in a directory
+    select.form-control(
+        [(ngModel)]='config.store.saveOutput.autoSave',
+        (ngModelChange)='config.save()'
+    )
+        option(ngValue='on') On
+        option(ngValue='ssh') For SSH only
+        option(ngValue='off') Off
+
+
+.form-line(*ngIf='config.store.saveOutput.autoSave !== "off"')
+    .header
+        .title Directory
+        .description Destination path for the logs
+    .input-group
+        input.form-control(
+            type='text',
+            placeholder='Home directory',
+            [(ngModel)]='config.store.saveOutput.autoSaveDirectory',
+            (ngModelChange)='config.save()'
+        )
+        .input-group-append
+            button.btn.btn-secondary((click)='pickDirectory()')
+                i.fas.fa-folder-open

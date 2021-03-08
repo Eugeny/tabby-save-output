@@ -1,11 +1,11 @@
 import * as fs from 'fs'
-import * as stripAnsi from 'strip-ansi'
 import { NgZone, Injectable } from '@angular/core'
 import { ToastrService } from 'ngx-toastr'
 import { ElectronService, HostAppService } from 'terminus-core'
 import { BaseTerminalTabComponent, TerminalContextMenuItemProvider } from 'terminus-terminal'
-import './styles.scss'
+import { cleanupOutput } from './util'
 
+import './styles.scss'
 
 @Injectable()
 export class SaveOutputContextMenu extends TerminalContextMenuItemProvider {
@@ -56,10 +56,8 @@ export class SaveOutputContextMenu extends TerminalContextMenuItemProvider {
 
         let stream = fs.createWriteStream(path)
 
-        const regex = /[\x08\x1b]((\[\??\d+[hl])|([=<>a-kzNM78])|([\(\)][a-b0-2])|(\[\d{0,2}\w)|(\[\d+;\d+[hfy]?)|(\[;?[hf])|(#[3-68])|([01356]n)|(O[mlnp-z]?)|(\/Z)|(\d+)|(\[\?\d;\d0c)|(\d;\dR))/gi
-
         let subscription = tab.output$.subscribe(data => {
-            data = stripAnsi(data.replace(regex, ''))
+            data = cleanupOutput(data)
             stream.write(data, 'utf8')
         })
 

@@ -5,6 +5,7 @@ module.exports = {
   entry: 'src/index.ts',
   devtool: 'source-map',
   context: __dirname,
+  mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
@@ -17,11 +18,11 @@ module.exports = {
     extensions: ['.ts', '.js'],
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.ts$/,
         loader: 'awesome-typescript-loader',
-        query: {
+        options: {
           configFileName: path.resolve(__dirname, 'tsconfig.json'),
         }
       },
