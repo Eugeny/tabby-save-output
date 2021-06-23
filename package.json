@@ -1,6 +1,6 @@
 {
   "name": "terminus-save-output",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Lets you stream console output into a file",
   "keywords": [
     "terminus-plugin"
@@ -38,10 +38,11 @@
     "sass-loader": "^11.0.1",
     "strip-ansi": "^5.0.0",
     "style-loader": "^2.0.0",
-    "terminus-core": "^1.0.135-nightly.0",
-    "terminus-settings": "^1.0.135-nightly.0",
-    "terminus-ssh": "^1.0.135-nightly.1",
-    "terminus-terminal": "^1.0.135-nightly.0",
+    "terminus-core": "^1.0.140",
+    "terminus-electron": "^1.0.140",
+    "terminus-settings": "^1.0.140",
+    "terminus-ssh": "^1.0.140",
+    "terminus-terminal": "^1.0.140",
     "typescript": "^4.2.3",
     "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0"

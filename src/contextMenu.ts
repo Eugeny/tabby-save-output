@@ -1,7 +1,8 @@
 import * as fs from 'fs'
-import { NgZone, Injectable } from '@angular/core'
+import { Injectable } from '@angular/core'
 import { ToastrService } from 'ngx-toastr'
-import { ElectronService, HostAppService } from 'terminus-core'
+import { MenuItemOptions } from 'terminus-core'
+import { ElectronService, ElectronHostWindow } from 'terminus-electron'
 import { BaseTerminalTabComponent, TerminalContextMenuItemProvider } from 'terminus-terminal'
 import { cleanupOutput } from './util'
 
@@ -12,23 +13,20 @@ export class SaveOutputContextMenu extends TerminalContextMenuItemProvider {
     weight = 1
 
     constructor (
-        private zone: NgZone,
-        private electron: ElectronService,
-        private hostApp: HostAppService,
         private toastr: ToastrService,
+        private electron: ElectronService,
+        private hostWindow: ElectronHostWindow,
     ) {
         super()
     }
 
-    async getItems (tab: BaseTerminalTabComponent): Promise<Electron.MenuItemConstructorOptions[]> {
+    async getItems (tab: BaseTerminalTabComponent): Promise<MenuItemOptions[]> {
         return [
             {
                 label: 'Save output to file...',
                 click: () => {
-                    this.zone.run(() => {
-                        setTimeout(() => {
-                            this.start(tab)
-                        })
+                    setTimeout(() => {
+                        this.start(tab)
                     })
                 }
             },
@@ -41,7 +39,7 @@ export class SaveOutputContextMenu extends TerminalContextMenuItemProvider {
         }
 
         let path = this.electron.dialog.showSaveDialogSync(
-            this.hostApp.getWindow(),
+            this.hostWindow.getWindow(),
             { defaultPath: 'terminal-log.txt' }
         )
 

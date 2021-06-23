@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { Component } from '@angular/core'
-import { ConfigService, ElectronService, HostAppService } from 'terminus-core'
+import { ConfigService } from 'terminus-core'
+import { ElectronHostWindow, ElectronService } from 'terminus-electron'
 
 /** @hidden */
 @Component({
@@ -10,17 +11,20 @@ export class SaveOutputSettingsTabComponent {
     constructor (
         public config: ConfigService,
         private electron: ElectronService,
-        private hostApp: HostAppService
+        private hostWindow: ElectronHostWindow,
     ) { }
 
     async pickDirectory (): Promise<void> {
         const paths = (await this.electron.dialog.showOpenDialog(
-            this.hostApp.getWindow(),
+            this.hostWindow.getWindow(),
             {
                 properties: ['openDirectory', 'showHiddenFiles'],
             }
         )).filePaths
-        this.config.store.saveOutput.autoSaveDirectory = paths[0]
+        if (paths[0]) {
+            this.config.store.saveOutput.autoSaveDirectory = paths[0]
+            this.config.save()
+        }
     }
 
 }
