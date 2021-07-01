@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { Component } from '@angular/core'
-import { ConfigService } from 'terminus-core'
-import { ElectronHostWindow, ElectronService } from 'terminus-electron'
+import { ConfigService } from 'tabby-core'
+import { ElectronHostWindow, ElectronService } from 'tabby-electron'
 
 /** @hidden */
 @Component({

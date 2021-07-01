@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { SettingsTabProvider } from 'terminus-settings'
+import { SettingsTabProvider } from 'tabby-settings'
 
 import { SaveOutputSettingsTabComponent } from './settingsTab.component'
 

@@ -3,9 +3,9 @@ import * as os from 'os'
 import * as path from 'path'
 import sanitizeFilename from 'sanitize-filename'
 import { Injectable } from '@angular/core'
-import { ConfigService } from 'terminus-core'
-import { TerminalDecorator, BaseTerminalTabComponent, BaseSession } from 'terminus-terminal'
-import { SSHTabComponent } from 'terminus-ssh'
+import { ConfigService } from 'tabby-core'
+import { TerminalDecorator, BaseTerminalTabComponent, BaseSession } from 'tabby-terminal'
+import { SSHTabComponent } from 'tabby-ssh'
 import { cleanupOutput } from './util'
 
 @Injectable()

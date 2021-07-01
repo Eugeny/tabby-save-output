@@ -1,9 +1,9 @@
 {
-  "name": "terminus-save-output",
-  "version": "2.0.0",
+  "name": "tabby-save-output",
+  "version": "3.0.0",
   "description": "Lets you stream console output into a file",
   "keywords": [
-    "terminus-plugin"
+    "tabby-plugin"
   ],
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -38,11 +38,11 @@
     "sass-loader": "^11.0.1",
     "strip-ansi": "^5.0.0",
     "style-loader": "^2.0.0",
-    "terminus-core": "^1.0.140",
-    "terminus-electron": "^1.0.140",
-    "terminus-settings": "^1.0.140",
-    "terminus-ssh": "^1.0.140",
-    "terminus-terminal": "^1.0.140",
+    "tabby-core": "^1.0.140",
+    "tabby-electron": "^1.0.140",
+    "tabby-settings": "^1.0.140",
+    "tabby-ssh": "^1.0.140",
+    "tabby-terminal": "^1.0.140",
     "typescript": "^4.2.3",
     "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0"
@@ -50,5 +50,5 @@
   "peerDependencies": {
     "@angular/core": "^4.0.1"
   },
-  "repository": "eugeny/terminus-save-output"
+  "repository": "eugeny/tabby-save-output"
 }

@@ -1,4 +1,4 @@
-import { ConfigProvider } from 'terminus-core'
+import { ConfigProvider } from 'tabby-core'
 
 /** @hidden */
 export class SaveOutputConfigProvider extends ConfigProvider {

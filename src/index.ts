@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
-import TerminusCoreModule, { ConfigProvider } from 'terminus-core'
-import { TerminalContextMenuItemProvider, TerminalDecorator } from 'terminus-terminal'
-import { SettingsTabProvider } from 'terminus-settings'
+import TabbyCoreModule, { ConfigProvider } from 'tabby-core'
+import { TerminalContextMenuItemProvider, TerminalDecorator } from 'tabby-terminal'
+import { SettingsTabProvider } from 'tabby-settings'
 
 import { SaveOutputContextMenu } from './contextMenu'
 import { SaveOutputConfigProvider } from './config'
@@ -15,7 +15,7 @@ import { SaveOutputDecorator } from './decorator'
     imports: [
         CommonModule,
         FormsModule,
-        TerminusCoreModule,
+        TabbyCoreModule,
     ],
     providers: [
         { provide: TerminalContextMenuItemProvider, useClass: SaveOutputContextMenu, multi: true },

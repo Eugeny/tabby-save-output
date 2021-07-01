@@ -11,7 +11,7 @@ module.exports = {
     filename: 'index.js',
     pathinfo: true,
     libraryTarget: 'umd',
-    devtoolModuleFilenameTemplate: 'webpack-terminus-save-output:///[resource-path]',
+    devtoolModuleFilenameTemplate: 'webpack-tabby-save-output:///[resource-path]',
   },
   resolve: {
     modules: ['.', 'src', 'node_modules'].map(x => path.join(__dirname, x)),
@@ -39,6 +39,6 @@ module.exports = {
     /^rxjs/,
     /^@angular/,
     /^@ng-bootstrap/,
-    /^terminus-/,
+    /^tabby-/,
   ]
 }

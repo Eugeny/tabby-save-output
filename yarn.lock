@@ -3624,6 +3624,37 @@ supports-color@^7.0.0:
   dependencies:
     has-flag "^4.0.0"
 
+tabby-core@^1.0.140:
+  version "1.0.144"
+  resolved "https://registry.yarnpkg.com/tabby-core/-/tabby-core-1.0.144.tgz#acfea14040a826b91d65635ace9bbdf16a5df093"
+  integrity sha512-9zXKRo8D7awdENBxP63n4MkP8ZJMq1/8jCF+YRhb24ujamFxjFNPSDSMBBiRWLVrDabjQdO+pcWpk2CJhjlPGA==
+
+tabby-electron@^1.0.140:
+  version "1.0.144"
+  resolved "https://registry.yarnpkg.com/tabby-electron/-/tabby-electron-1.0.144.tgz#ae692dbad62808a8a4e6a2d75e828a3d525273b8"
+  integrity sha512-AjRydrDW4CQQ6oqzdxvPC5Ctnj2jKhMe28SfNZwpt7i2ByUKGctvSNxpqCS+rPF1jYlfFsk3BUW1zNYSKIrRyQ==
+
+tabby-settings@^1.0.140:
+  version "1.0.144"
+  resolved "https://registry.yarnpkg.com/tabby-settings/-/tabby-settings-1.0.144.tgz#3529fe46d3f61dd145291e94aa3da8dc8b9040ae"
+  integrity sha512-oRJKoGc1KREXPLmC7vadKh763JXpvk/lcRUDl2dNUFWGWZLsp8ordXra1w3jfKE0K903i2DrD+62XUZrXgrd9Q==
+
+tabby-ssh@^1.0.140:
+  version "1.0.144"
+  resolved "https://registry.yarnpkg.com/tabby-ssh/-/tabby-ssh-1.0.144.tgz#6bb929bfb89f1dc5d03abaccd93f99c53f2e67b0"
+  integrity sha512-sS22RNHs1ACUBOIQeBj0N6IEakUIBO7EPAYQS7jOvvwKYhVJwIohV9tprR3qhcTRnaBaP5BJLD6cm7bjDhbIXg==
+  dependencies:
+    run-script-os "^1.1.3"
+    socksv5 "^0.0.6"
+
+tabby-terminal@^1.0.140:
+  version "1.0.144"
+  resolved "https://registry.yarnpkg.com/tabby-terminal/-/tabby-terminal-1.0.144.tgz#d1f1ba83494a7c9acfd2f60b8c4a8c869d1c8c8d"
+  integrity sha512-AkJq955Kz9tM58ewEJ634Pz4iSDwLuiw+rZNcHIhPlJm+snOh0x5S0liZSbS+U17xrhVqHJwg8DwghMUTfqkdg==
+  dependencies:
+    hterm-umdjs "1.4.1"
+    opentype.js "^1.3.3"
+
 tapable@^1.0.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
@@ -3645,37 +3676,6 @@ tar@^6.0.2:
     minizlib "^2.1.1"
     mkdirp "^1.0.3"
     yallist "^4.0.0"
-
-terminus-core@^1.0.140:
-  version "1.0.140"
-  resolved "https://registry.yarnpkg.com/terminus-core/-/terminus-core-1.0.140.tgz#4f1c8f5cdbf6c47bd659407d5f69ae783139d6dd"
-  integrity sha512-Q5A2G8B+Bro2V8b6dL7rfvlpB6F4kLzVlIDxHF5k/7LZzz7PvmKGCJeFO1DbukD5Nh9ORdNaTFUcuAispYOr1Q==
-
-terminus-electron@^1.0.140:
-  version "1.0.140"
-  resolved "https://registry.yarnpkg.com/terminus-electron/-/terminus-electron-1.0.140.tgz#94b14f3dc33b86900da12a15c14430f84cf0f5c7"
-  integrity sha512-sdTtAN9iKeOjbUopp+uqXuyeHUZh9tHS9fbO8D0asC1iIbgAdQJqZ6uA6H+e19rVEYMeqROgMN029ZM7W3gGTw==
-
-terminus-settings@^1.0.140:
-  version "1.0.140"
-  resolved "https://registry.yarnpkg.com/terminus-settings/-/terminus-settings-1.0.140.tgz#ef44e1abce9d8de86b14f9e460b47300e97924cb"
-  integrity sha512-+rxoZ9ecaksrVn+4OAGDEJZv7kttRHsPwbsxp+yRodeNs0AFiN6eNyf6M8zikbE8ppPCkNNMTLW6oXvF5dywHQ==
-
-terminus-ssh@^1.0.140:
-  version "1.0.140"
-  resolved "https://registry.yarnpkg.com/terminus-ssh/-/terminus-ssh-1.0.140.tgz#546a9f2f85f59632d3394b9cbeadce993240789c"
-  integrity sha512-vJGajRIutNwXZsPJYin33ToUT1Q7fWC1lg2mP5hH7RUlXLyg42bDf2N6/H5KZL6q52PuhHTLw30HMjxaYyFavg==
-  dependencies:
-    run-script-os "^1.1.3"
-    socksv5 "^0.0.6"
-
-terminus-terminal@^1.0.140:
-  version "1.0.140"
-  resolved "https://registry.yarnpkg.com/terminus-terminal/-/terminus-terminal-1.0.140.tgz#eb19fae27357760a6aa5ded5c5e4edbb6deb726d"
-  integrity sha512-fk5Ee/+AFOWwlezHjls53bneKEhWKi/ceLxC1U72piZoeoql2d4eO/+t1Kl+3XB70PCiIMb4aKZGn5y+p107aw==
-  dependencies:
-    hterm-umdjs "1.4.1"
-    opentype.js "^1.3.3"
 
 terser-webpack-plugin@^5.1.1:
   version "5.1.1"

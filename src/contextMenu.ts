@@ -1,9 +1,9 @@
 import * as fs from 'fs'
 import { Injectable } from '@angular/core'
 import { ToastrService } from 'ngx-toastr'
-import { MenuItemOptions } from 'terminus-core'
-import { ElectronService, ElectronHostWindow } from 'terminus-electron'
-import { BaseTerminalTabComponent, TerminalContextMenuItemProvider } from 'terminus-terminal'
+import { MenuItemOptions } from 'tabby-core'
+import { ElectronService, ElectronHostWindow } from 'tabby-electron'
+import { BaseTerminalTabComponent, TerminalContextMenuItemProvider } from 'tabby-terminal'
 import { cleanupOutput } from './util'
 
 import './styles.scss'
