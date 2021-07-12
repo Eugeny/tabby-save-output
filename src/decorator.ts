@@ -27,7 +27,8 @@ export class SaveOutputDecorator extends TerminalDecorator {
                     this.attachToSession(session, tab)
                 }
             })
-        } else if (tab.session) {
+        }
+        if (tab.session) {
             this.attachToSession(tab.session, tab)
         }
     }

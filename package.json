@@ -1,6 +1,6 @@
 {
   "name": "tabby-save-output",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Lets you stream console output into a file",
   "keywords": [
     "tabby-plugin"
