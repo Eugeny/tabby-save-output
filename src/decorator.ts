@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core'
 import { ConfigService } from 'tabby-core'
 import { TerminalDecorator, BaseTerminalTabComponent, BaseSession } from 'tabby-terminal'
 import { SSHTabComponent } from 'tabby-ssh'
-import { cleanupOutput } from './util'
+import { createOutputSanitizer } from './util'
 
 @Injectable()
 export class SaveOutputDecorator extends TerminalDecorator {
@@ -37,6 +37,7 @@ export class SaveOutputDecorator extends TerminalDecorator {
         let outputPath = this.generatePath(tab)
         const stream = fs.createWriteStream(outputPath)
         let dataLength = 0
+        const cleanupOutput = createOutputSanitizer()
 
         // wait for the title to settle
         setTimeout(() => {

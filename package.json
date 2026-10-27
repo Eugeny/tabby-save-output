@@ -10,7 +10,8 @@
   "scripts": {
     "build": "webpack --progress --color",
     "watch": "webpack --progress --color --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "test": "node test/util.test.js"
   },
   "files": [
     "dist"
@@ -36,7 +37,6 @@
     "rxjs": "^6.2.1",
     "sanitize-filename": "^1.6.3",
     "sass-loader": "^11.0.1",
-    "strip-ansi": "^5.0.0",
     "style-loader": "^2.0.0",
     "tabby-core": "^1.0.140",
     "tabby-electron": "^1.0.140",

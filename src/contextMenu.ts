@@ -4,7 +4,7 @@ import { ToastrService } from 'ngx-toastr'
 import { MenuItemOptions } from 'tabby-core'
 import { ElectronService, ElectronHostWindow } from 'tabby-electron'
 import { BaseTerminalTabComponent, TerminalContextMenuItemProvider } from 'tabby-terminal'
-import { cleanupOutput } from './util'
+import { createOutputSanitizer } from './util'
 
 import './styles.scss'
 
@@ -53,6 +53,7 @@ export class SaveOutputContextMenu extends TerminalContextMenuItemProvider {
         ui.innerHTML = require('./ui.pug')
 
         let stream = fs.createWriteStream(path)
+        const cleanupOutput = createOutputSanitizer()
 
         let subscription = tab.output$.subscribe(data => {
             data = cleanupOutput(data)
